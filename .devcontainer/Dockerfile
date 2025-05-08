@@ -3,15 +3,17 @@ FROM python:3.10-slim
 
 # Set work directory
 WORKDIR /workspace
-RUN ls -al /
-RUN ls -al /workspace
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
 # Install dependencies
+COPY requirements.txt .
+COPY .env.example .
 COPY app.py .
 COPY git_plugin.py .
 
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
 
 # Expose Streamlit default port
 EXPOSE 8501
@@ -20,4 +22,4 @@ EXPOSE 8501
 RUN apt-get update && apt-get install -y curl git
 
 # Default command (you can override this in devcontainer.json)
-CMD ["streamlit", "run", "app.py"]
+CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]

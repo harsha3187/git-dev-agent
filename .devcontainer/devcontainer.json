@@ -1,22 +1,33 @@
 {
 	"name": "Streamlit Dev Container",
-	"context":"..",
-	"build": {
-		"dockerfile": ".devcontainer/Dockerfile"
+	"build":{
+		"dockerfile": "Dockerfile",
+    "context": ".."
 	},
 	"workspaceFolder": "/workspace",
-	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "remoteUser": "root",
+  "postStartCommand": "streamlit run app.py --server.port=8501 --server.address=0.0.0.0",
 	"forwardPorts": [
 		8501
 	],
-	"postCreateCommand": "pip install -r requirements.txt",
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"ms-python.python",
 				"ms-python.vscode-pylance"
 			]
-		}
+		},
+		"settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.formatting.provider": "black",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.organizeImports": true
+        }
+      }
 	},
-	"runArgs": ["--env-file", ".env"]
+	"runArgs": ["--env-file", ".env"],
+	"remoteEnv": {
+		"PYTHONPATH": "${workspaceFolder}"
+	  }
 }
