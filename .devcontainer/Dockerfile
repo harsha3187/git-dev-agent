@@ -22,4 +22,3 @@ EXPOSE 8501
 RUN apt-get update && apt-get install -y curl git
 
 # Default command (you can override this in devcontainer.json)
-CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
