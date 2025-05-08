@@ -21,10 +21,44 @@ git-chat-agent/
 │   ├── Dockerfile          # Dockerfile for the development container
 │   ├── devcontainer.json   # Devcontainer configuration
 ├── app.py                  # Main Streamlit application
+├── git_plugin.py           # Plugin for interacting with GitHub repositories
 ├── requirements.txt        # Python dependencies
 ├── .env.example            # Example environment variables
 ├── .env                    # Environment variables (not included in the repo)
 ```
+
+---
+
+## ✨ Features in Detail
+
+### 💬 Chat with GitHub Repositories
+
+- Query repository details in a conversational format.
+- View chat history and interact with the assistant.
+
+### 🐞 Create GitHub Issues
+
+- Fill out a form to create issues in the repository.
+- Add labels and descriptions for better issue tracking.
+
+### 🧩 `git_plugin.py` - GitHub Interaction Plugin
+
+The `git_plugin.py` file provides functionality to interact with GitHub repositories programmatically. It includes features such as:
+
+- Fetching repository details (e.g., branches, commits, pull requests).
+- Searching for files or content within the repository.
+- Creating and managing GitHub issues.
+- Authenticating with GitHub using a Personal Access Token (PAT).
+
+This plugin is a core component of the application, enabling seamless integration with GitHub.
+
+### 🧑‍💻 Development with Dev Containers
+
+This repository includes a `.devcontainer` configuration for Visual Studio Code. To use it:
+
+1. Open the repository in VS Code.
+2. Install the **Dev Containers** extension.
+3. Reopen the project in the container.
 
 ---
 
@@ -49,7 +83,7 @@ Update the values in the `.env` file with your own credentials:
 
 ```plaintext
 GLOBAL_LLM_SERVICE="AzureOpenAI"
-AZURE_OPENAI_ENDPOINT="https://openai-h26gz3bmteu7e.openai.azure.com/"
+AZURE_OPENAI_ENDPOINT=""
 AZURE_OPENAI_API_KEY="YOUR_API_KEY"
 AZURE_OPENAI_CHAT_DEPLOYMENT_NAME="gpt-4.1"
 AZURE_OPENAI_API_VERSION="2024-12-01-preview"
@@ -89,34 +123,6 @@ docker run -p 8501:8501 --env-file .env git-chat-agent
 ```
 
 Access the app at [http://localhost:8501](http://localhost:8501).
-
----
-
-## ✨ Features in Detail
-
-### 💬 Chat with GitHub Repositories
-
-- Query repository details in a conversational format.
-- View chat history and interact with the assistant.
-
-### 🐞 Create GitHub Issues
-
-- Fill out a form to create issues in the repository.
-- Add labels and descriptions for better issue tracking.
-
-### 🧑‍💻 Development with Dev Containers
-
-This repository includes a `.devcontainer` configuration for Visual Studio Code. To use it:
-
-1. Open the repository in VS Code.
-2. Install the **Dev Containers** extension.
-3. Reopen the project in the container.
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License**.
 
 ---
 
