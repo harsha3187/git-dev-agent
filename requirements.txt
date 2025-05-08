@@ -1,0 +1,7 @@
+semantic-kernel
+pandas
+numpy
+scikit-learn
+matplotlib
+scipy
+streamlit
