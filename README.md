@@ -62,7 +62,25 @@ This repository includes a `.devcontainer` configuration for Visual Studio Code.
 
 ---
 
-## 🛠️ Setup Instructions
+## 📓 Jupyter Notebook: `semantic-kernel-chat-agent.ipynb`
+
+### Purpose
+The  notebook provides an interactive environment to explore and experiment with the Semantic Kernel framework. It demonstrates how to use Semantic Kernel to build intelligent, context-aware chat agents and plugins for interacting with GitHub repositories.
+
+### Features
+- **Introduction to Semantic Kernel**:
+  - Overview of key concepts like Kernel, Plugins, Agents, Chat Completion, and Vector Stores.
+- **Chat Completion Service**:
+  - Demonstrates how to create and interact with a chat completion service using Azure OpenAI.
+- **Chat Completion Agent**:
+  - Explains the difference between a chat completion service and an agent, and how to create an agent for context-aware interactions.
+- **GitHub Plugin**:
+  - Shows how to create a plugin to interact with the GitHub API for tasks like retrieving repository details, managing issues, and analyzing commits.
+- **Practical Examples**:
+  - Includes examples of querying user profiles, describing repositories, listing issues, and analyzing commits.
+
+
+## 🛠️ Manual Setup Instructions
 
 ### 1. Clone the Repository
 
