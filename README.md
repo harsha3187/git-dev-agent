@@ -179,7 +179,7 @@ Follow these steps to create an Azure OpenAI endpoint and keys for GPT-4.1:
 ### Reference Image
 Below is an example of the **Keys and Endpoint** section in the Azure portal:
 
-![Azure OpenAI Keys and Endpoint](https://learn.microsoft.com/en-us/azure/cognitive-services/media/openai/openai-keys-endpoint.png)
+![Azure OpenAI Keys and Endpoint]<img width="854" alt="image" src="https://github.com/user-attachments/assets/16e7ff96-a584-4f74-80fa-ada4bb5a39e7" />
 
 ---
 
