@@ -112,6 +112,37 @@ AZURE_OPENAI_CHAT_DEPLOYMENT_NAME="gpt-4.1"
 AZURE_OPENAI_API_VERSION="2024-12-01-preview"
 GITHUB_PAT="YOUR_GITHUB_PERSONAL_ACCESS_TOKEN"
 ```
+Follow these steps to create an Azure OpenAI endpoint and keys for Azure Open AI Model:
+
+### 1. Create an Azure OpenAI Resource
+1. Log in to the [Azure Portal](https://portal.azure.com/).
+2. Search for **Azure OpenAI** in the search bar and select **Azure OpenAI**.
+3. Click **Create** to start creating a new resource.
+4. Fill in the required details:
+   - **Subscription**: Select your Azure subscription.
+   - **Resource Group**: Create a new resource group or select an existing one.
+   - **Region**: Choose a supported region (e.g., East US, West Europe).
+   - **Name**: Provide a unique name for your OpenAI resource.
+5. Click **Review + Create** and then **Create**.
+
+### 2. Deploy a model (ex:GPT-4.1)
+1. Navigate to your newly created Azure OpenAI resource.
+2. Go to the **Model Deployments** section in the left-hand menu.
+3. Click **Create** to deploy a new model.
+4. Select the **Model(ex:GPT-4.1)** model from the list.
+5. Provide a **Deployment Name** (e.g., `gpt-4.1`) and configure the model settings as needed.
+6. Click **Deploy** to start the deployment process.
+
+### 3. Retrieve Endpoint and API Key
+1. Once the deployment is complete, go to the **Keys and Endpoint** section in your Azure OpenAI resource.
+2. Copy the **Endpoint URL** and **API Key**. These will be used in your `.env` file.
+
+### Reference Image
+Below is an example of the **Keys and Endpoint** section in the Azure portal:
+
+<img width="854" alt="image" src="https://github.com/user-attachments/assets/16e7ff96-a584-4f74-80fa-ada4bb5a39e7" />
+
+---
 
 ### 2.3 Install Dependencies
 
@@ -148,51 +179,7 @@ docker run -p 8501:8501 --env-file .env git-chat-agent
 Access the app at [http://localhost:8501](http://localhost:8501).
 
 ---
-
-## 🔑 Setting Up Azure OpenAI Endpoint and Keys
-
-Follow these steps to create an Azure OpenAI endpoint and keys for Azure Open AI Model:
-
-### 1. Create an Azure OpenAI Resource
-1. Log in to the [Azure Portal](https://portal.azure.com/).
-2. Search for **Azure OpenAI** in the search bar and select **Azure OpenAI**.
-3. Click **Create** to start creating a new resource.
-4. Fill in the required details:
-   - **Subscription**: Select your Azure subscription.
-   - **Resource Group**: Create a new resource group or select an existing one.
-   - **Region**: Choose a supported region (e.g., East US, West Europe).
-   - **Name**: Provide a unique name for your OpenAI resource.
-5. Click **Review + Create** and then **Create**.
-
-### 2. Deploy a model (ex:GPT-4.1)
-1. Navigate to your newly created Azure OpenAI resource.
-2. Go to the **Model Deployments** section in the left-hand menu.
-3. Click **Create** to deploy a new model.
-4. Select the **Model(ex:GPT-4.1)** model from the list.
-5. Provide a **Deployment Name** (e.g., `gpt-4.1`) and configure the model settings as needed.
-6. Click **Deploy** to start the deployment process.
-
-### 3. Retrieve Endpoint and API Key
-1. Once the deployment is complete, go to the **Keys and Endpoint** section in your Azure OpenAI resource.
-2. Copy the **Endpoint URL** and **API Key**. These will be used in your `.env` file.
-
-### Reference Image
-Below is an example of the **Keys and Endpoint** section in the Azure portal:
-
-<img width="854" alt="image" src="https://github.com/user-attachments/assets/16e7ff96-a584-4f74-80fa-ada4bb5a39e7" />
-
----
-
-### Update `.env` File
-Add the retrieved values to your `.env` file:
-
-```plaintext
-AZURE_OPENAI_ENDPOINT="https://<your-resource-name>.openai.azure.com/"
-AZURE_OPENAI_API_KEY="YOUR_API_KEY"
-AZURE_OPENAI_CHAT_DEPLOYMENT_NAME="gpt-4.1"
-AZURE_OPENAI_API_VERSION="2024-12-01-preview"
----
-## 🙌 Acknowledgments
+### 🙌 Acknowledgments
 
 - [**Streamlit**](https://streamlit.io/)
 - [**Semantic Kernel**](https://github.com/microsoft/semantic-kernel)
