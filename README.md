@@ -151,6 +151,6 @@ Access the app at [http://localhost:8501](http://localhost:8501).
 
 ## 🙌 Acknowledgments
 
-- **Streamlit**
-- **Semantic Kernel**
-- **Azure OpenAI**
+- [**Streamlit**](https://streamlit.io/)
+- [**Semantic Kernel**](https://github.com/microsoft/semantic-kernel)
+- [**Azure OpenAI**](https://azure.microsoft.com/en-us/products/cognitive-services/openai-service/)
