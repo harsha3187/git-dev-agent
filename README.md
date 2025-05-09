@@ -52,14 +52,6 @@ The `git_plugin.py` file provides functionality to interact with GitHub reposito
 
 This plugin is a core component of the application, enabling seamless integration with GitHub.
 
-### 🧑‍💻 Development with Dev Containers
-
-This repository includes a `.devcontainer` configuration for Visual Studio Code. To use it:
-
-1. Open the repository in VS Code.
-2. Install the **Dev Containers** extension.
-3. Reopen the project in the container.
-
 ---
 
 ## 📓 Jupyter Notebook: `semantic-kernel-chat-agent.ipynb`
@@ -79,8 +71,19 @@ The  notebook provides an interactive environment to explore and experiment with
 - **Practical Examples**:
   - Includes examples of querying user profiles, describing repositories, listing issues, and analyzing commits.
 
+---
 
-## 🛠️ Manual Setup Instructions
+## 🛠️ Setup Instructions
+
+### 🧑‍💻 Development with Dev Containers
+
+This repository includes a `.devcontainer` configuration for Visual Studio Code. To use it:
+
+1. Open the repository in VS Code.
+2. Install the **Dev Containers** extension.
+3. Reopen the project in the container.
+
+### Local setup
 
 ### 1. Clone the Repository
 
