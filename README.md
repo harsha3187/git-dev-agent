@@ -75,7 +75,7 @@ The  notebook provides an interactive environment to explore and experiment with
 
 ## 🛠️ Setup Instructions
 
-### 🧑‍💻 Development with Dev Containers
+### 🧑‍💻 1. Development with Dev Containers
 
 This repository includes a `.devcontainer` configuration for Visual Studio Code. To use it:
 
@@ -83,16 +83,18 @@ This repository includes a `.devcontainer` configuration for Visual Studio Code.
 2. Install the **Dev Containers** extension.
 3. Reopen the project in the container.
 
-### Local setup
+---
 
-### 1. Clone the Repository
+### 🧑‍💻 2. Local setup
+
+### 2.1 Clone the Repository
 
 ```bash
 git clone https://github.com/hannapureddy_microsoft/git-agent.git
 cd git-chat-agent
 ```
 
-### 2. Create a `.env` File
+### 2.2 Create a `.env` File
 
 Create a `.env` file in the root directory by copying the `.env.example` file:
 
@@ -111,7 +113,7 @@ AZURE_OPENAI_API_VERSION="2024-12-01-preview"
 GITHUB_PAT="YOUR_GITHUB_PERSONAL_ACCESS_TOKEN"
 ```
 
-### 3. Install Dependencies
+### 2.3 Install Dependencies
 
 Install the required Python packages:
 
@@ -119,7 +121,7 @@ Install the required Python packages:
 pip install -r requirements.txt
 ```
 
-### 4. Run the Application
+### 2.4 Run the Application
 
 Start the Streamlit app:
 
@@ -129,15 +131,15 @@ streamlit run app.py
 
 ---
 
-## 🐳 Using Docker
+## 🐳 3.Using Docker
 
-### Build the Docker Image
+### 3.1 Build the Docker Image
 
 ```bash
 docker build -f .devcontainer/Dockerfile -t git-chat-agent .
 ```
 
-### Run the Docker Container
+### 3.2 Run the Docker Container
 
 ```bash
 docker run -p 8501:8501 --env-file .env git-chat-agent
