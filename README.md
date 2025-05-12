@@ -54,7 +54,7 @@ This plugin is a core component of the application, enabling seamless integratio
 
 ---
 
-## 📓 Jupyter Notebook: `semantic-kernel-chat-agent.ipynb`
+## 📓 Jupyter Notebook: `tutorial/semantic-kernel-chat-agent.ipynb`
 
 ### Purpose
 The  notebook provides an interactive environment to explore and experiment with the Semantic Kernel framework. It demonstrates how to use Semantic Kernel to build intelligent, context-aware chat agents and plugins for interacting with GitHub repositories.
