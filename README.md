@@ -20,6 +20,8 @@ git-chat-agent/
 ├── .devcontainer/          # Dev container configuration
 │   ├── Dockerfile          # Dockerfile for the development container
 │   ├── devcontainer.json   # Devcontainer configuration
+├── samples/                # Contains concepts samples
+├── tutorial/               # Notebook file for step by step process of creating the kernel with plugins
 ├── app.py                  # Main Streamlit application
 ├── git_plugin.py           # Plugin for interacting with GitHub repositories
 ├── requirements.txt        # Python dependencies
