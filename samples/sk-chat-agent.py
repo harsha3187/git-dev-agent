@@ -5,8 +5,13 @@ from semantic_kernel.connectors.ai.open_ai import AzureChatCompletion
 from dotenv import load_dotenv
 import os
 
-# Load environment variables
-load_dotenv()
+if os.path.exists(".env"):
+    load_dotenv(override=True)
+else:
+    # Load environment variables from the parent 
+    current_dir = os.getcwd()
+    env_path = os.path.join(current_dir, '..', '.env')
+    load_dotenv(dotenv_path=env_path)
 
 # Initialize the Kernel
 kernel = Kernel()
